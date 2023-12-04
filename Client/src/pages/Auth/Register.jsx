@@ -400,13 +400,16 @@ const Register = () => {
             <i className="fa-brands fa-facebook"></i> Register with Facebook
           </button>
           <button type="button">
-            <i className="fa-brands fa-instagram"></i> Register with Instagram
+            <i className="fa-brands fa-instagram" disabled></i> Register with
+            Instagram
           </button>
           <button type="button" onClick={handleTwitter}>
-            <i className="fa-brands fa-twitter"></i> Register with Twitter
+            <i className="fa-brands fa-twitter" disabled></i> Register with
+            Twitter
           </button>
           <button type="button" onClick={handleGit}>
-            <i className="fa-brands fa-github"></i> Register with Github
+            <i className="fa-brands fa-github" disabled></i> Register with
+            Github
           </button>
           <div>
             <p>

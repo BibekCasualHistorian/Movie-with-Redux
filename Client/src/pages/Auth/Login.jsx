@@ -344,13 +344,14 @@ const Login = () => {
             <i className="fa-brands fa-facebook"></i> Login with Facebook
           </button>
           <button type="button">
-            <i className="fa-brands fa-instagram"></i> Login with Instagram
+            <i className="fa-brands fa-instagram" disabled></i> Login with
+            Instagram
           </button>
           <button type="button" onClick={handleTwitter}>
-            <i className="fa-brands fa-twitter"></i> Login with Twitter
+            <i className="fa-brands fa-twitter" disabled></i> Login with Twitter
           </button>
           <button type="button" onClick={handleGit}>
-            <i className="fa-brands fa-github"></i> Login with Github
+            <i className="fa-brands fa-github" disabled></i> Login with Github
           </button>
           <div>
             <p>
