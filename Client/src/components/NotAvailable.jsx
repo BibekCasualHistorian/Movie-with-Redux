@@ -13,6 +13,7 @@ const NotAvailable = ({ item, full, favourites }) => {
     justifyContent: "center",
     flexDirection: "column",
     gap: "1em",
+
     alignItems: "center",
     borderRadius: "1em",
     color: "white",

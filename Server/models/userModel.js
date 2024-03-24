@@ -20,6 +20,10 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: [true, "Password is required"],
   },
+  socialLogin: {
+    type: Boolean,
+    default: false,
+  },
   photo: {
     type: String,
     default: "profile.jpg",

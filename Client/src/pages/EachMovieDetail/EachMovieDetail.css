@@ -266,14 +266,16 @@
   }
 
   .all-official-videos {
-    gap: 2em;
-    grid-template-columns: 1fr 1fr;
+    display: block;
+    /* gap: 2em;
+    grid-template-columns: 1fr 1fr; */
   }
 }
 
 @media screen and (min-width: 1000px) {
   .all-official-videos {
-    gap: 2em;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: block;
+    /* gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr; */
   }
 }

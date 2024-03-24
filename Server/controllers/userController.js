@@ -132,14 +132,14 @@ const deleteFavourite = async (req, res) => {
 };
 
 const socialRegister = async (req, res) => {
-  let { username, email, phone, photo, social } = req.body;
+  let { username, email, phone, photo, social, socialLogin } = req.body;
   if (!phone) {
     phone = "900";
   }
 
-  console.log("it is in register social");
+  console.log("it is in register social", social);
 
-  console.log(username, email, phone, photo);
+  console.log(username, email, phone, photo, social, socialLogin);
   const password = generateHashedPassword();
   try {
     let isAlreadyRegistered;
@@ -165,6 +165,7 @@ const socialRegister = async (req, res) => {
         phone,
         photo,
         password,
+        socialLogin,
       });
     } else {
       username = username + `${generateRandomPassword(5)}`;
@@ -174,6 +175,7 @@ const socialRegister = async (req, res) => {
         phone,
         photo,
         password,
+        socialLogin,
       });
     }
     const token = generateJwtToken(user._id);

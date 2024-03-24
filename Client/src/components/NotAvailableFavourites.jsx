@@ -13,7 +13,7 @@ const NotAvailableFavourites = ({ error, favourites }) => {
     borderRadius: "1em",
     color: "white",
     width: "100%",
-    height: "250px",
+    height: "100%",
   };
   return (
     <div style={style}>

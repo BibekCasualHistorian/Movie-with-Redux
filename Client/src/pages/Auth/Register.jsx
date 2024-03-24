@@ -31,7 +31,7 @@ import { TwitterAuthProvider } from "firebase/auth";
 // import firebase from '../../utils/firebase'
 
 const Register = () => {
-  console.log("app", app);
+  // console.log("app", app);
 
   const auth = getAuth(app);
   const twitterProvider = new TwitterAuthProvider();
@@ -39,8 +39,8 @@ const Register = () => {
   const provider = new GoogleAuthProvider();
   const fbProvider = new FacebookAuthProvider();
 
-  console.log("provider", app);
-  console.log("gitProvider", gitProvider);
+  // console.log("provider", app);
+  // console.log("gitProvider", gitProvider);
 
   const dispatch = useDispatch();
 
@@ -64,7 +64,13 @@ const Register = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, email, phone, password }),
+        body: JSON.stringify({
+          username,
+          email,
+          mobile: phone,
+          password,
+          socialLogin: true,
+        }),
         credentials: "include",
       });
       const data = await response.json();
@@ -107,6 +113,7 @@ const Register = () => {
               email,
               phone: phoneNumber,
               photo: photoURL,
+              socialLogin: true,
             }),
           }
         );
@@ -155,6 +162,7 @@ const Register = () => {
               email,
               phone: phoneNumber,
               photo: photoURL,
+              socialLogin: true,
             }),
           }
         );
@@ -215,6 +223,7 @@ const Register = () => {
               email,
               phone: phoneNumber,
               photo: photoURL,
+              socialLogin: true,
             }),
           }
         );
@@ -276,6 +285,7 @@ const Register = () => {
               email,
               phone: phoneNumber,
               photo: photoURL,
+              socialLogin: true,
             }),
           }
         );

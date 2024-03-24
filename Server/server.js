@@ -2,6 +2,8 @@ require("dotenv").config();
 
 const mongoose = require("mongoose");
 
+console.log(process.env.ATLAS_URI);
+
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 

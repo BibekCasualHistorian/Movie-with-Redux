@@ -6,11 +6,14 @@ import { toastSuccess, toastFailure } from "../../utils/toastify";
 // react Toasting
 import { toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SocialRegistered from "../../components/SocialRegistered";
 
 const UpdatePassword = () => {
-  const { _id } = useSelector((state) => {
+  const { _id, socialLogin } = useSelector((state) => {
     return state.user.user;
   });
+
+  console.log("social", socialLogin);
 
   const [error, setError] = useState("");
 
@@ -57,7 +60,9 @@ const UpdatePassword = () => {
       setError(error.message);
     }
   };
-
+  if (socialLogin) {
+    return <SocialRegistered></SocialRegistered>;
+  }
   return (
     <form className="update-password dotted-border" onSubmit={handleChange}>
       <h1>Update Password</h1>
