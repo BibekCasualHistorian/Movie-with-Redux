@@ -12,7 +12,7 @@ const UpdateProfile = () => {
 
   const user = useSelector((state) => state.user.user);
 
-  console.log("user", user);
+  // console.log("user", user);
 
   const [email, setEmail] = useState(user.email);
   const [username, setUsername] = useState(user.username);
@@ -46,7 +46,7 @@ const UpdateProfile = () => {
         }
       );
       const data = await response.json();
-      console.log("data", data);
+      // console.log("data", data);
       if (response.ok) {
         localStorage.setItem("token-movie", JSON.stringify(data.data));
         dispatch(loginOrRegister(data.data));
